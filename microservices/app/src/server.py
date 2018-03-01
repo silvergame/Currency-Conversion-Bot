@@ -59,7 +59,7 @@ def requires_auth(f):
 
 @app.route('/')
 def home():
-    return "Welcome to App service LATEST UPDATED "
+    return "Welcome to App service LATEST UPDATED - 1st March "
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
