@@ -1,8 +1,12 @@
 {
-  "name": "bot",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+      "dns": "^0.2.2",
+    "fetch": "^1.1.0",
+    "react-router-dom": "^4.2.2",
+
     "react": "^16.2.0",
     "react-bot-ui": "^2.0.0",
     "react-dom": "^16.2.0",
