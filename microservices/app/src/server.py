@@ -92,7 +92,7 @@ def makeWebhookResult(req):
     r=json.loads(r.content)
     cost=r["results"][st1]["val"] * no
     print(cost)
-    cost =round(answer,3)
+    cost =round(cost,3)
     #print(cost1)
 
     speech = "Amount in " + to + " is " + str(cost)
