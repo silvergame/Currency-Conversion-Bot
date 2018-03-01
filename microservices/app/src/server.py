@@ -2,6 +2,7 @@ from src import app
 from flask import render_template
 # from flask import jsonify
 
+import requests
 import urllib
 import json
 import os
@@ -91,7 +92,7 @@ def makeWebhookResult(req):
     r=json.loads(r.content)
     cost=r["results"][st1]["val"] * no
     print(cost)
-    print(cost1)
+    #print(cost1)
 
     speech = "Amount in " + to + " is " + str(cost)
 
