@@ -8,19 +8,14 @@ import './main.css';
 
 const BOT_DELAY = 4000;
 const BOT_SPEED = 0.03;
-const BOT_MAX_CHARS = 250;
-
-const ressize = {
-    
-    width: '300px',
-    
-  }
+const BOT_MAX_CHARS = 150;
 
 function getBotDelay(msg, isQuick = false) {
   let delay = isQuick ? BOT_DELAY / 2 : BOT_DELAY;
   let speed = isQuick ? BOT_SPEED * 2 : BOT_SPEED;
   return msg.length > BOT_MAX_CHARS ? delay : Math.floor(msg.length / speed);
 }
+
  class ReactBotUI extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +25,7 @@ function getBotDelay(msg, isQuick = false) {
     this.botQueue = [];
     this.isProcessingQueue = false;
     this.state = {
-      title: props.title || ' Curren- Currency bot',
+      title: props.title || 'I convert currencies',
       messages: [],
       isBotTyping: false,
       isOpen: props.isOpen !== undefined ? props.isOpen : true,
@@ -63,9 +58,7 @@ function getBotDelay(msg, isQuick = false) {
     }
   }
 
-
-
-    processResponse(text) {
+  processResponse(text) {
     const messages = text
       .match(/[^.!?]+[.!?]*/g)
       .map(str => str.trim());
@@ -74,7 +67,6 @@ function getBotDelay(msg, isQuick = false) {
     // start processing bot queue
     const isQuick = !this.state.isBotTyping;
     this.setState({isBotTyping: true}, () => this.processBotQueue(isQuick));
-  
   }
 
   getResponse(text) {
@@ -112,7 +104,7 @@ function getBotDelay(msg, isQuick = false) {
     }
     this.setState({dialogHeight});
   }
-  
+
   handleToggle() {
     if (this.state.isVisible) {
       this.setState({isOpen: !this.state.isOpen});
@@ -134,22 +126,24 @@ function getBotDelay(msg, isQuick = false) {
     return (
       <div className="container" style={this.state.isVisible ? {display: 'block'} : {display: 'none'}}>
         <Header title={this.state.title}
-                onClick={this.handleToggle} />
+          onClick={this.handleToggle} />
         <div style={this.state.isOpen ? {minHeight: `${this.state.dialogHeight}px`} : {maxHeight: 0, overflow: 'hidden'}}>
           <Dialog messages={this.state.messages}
-                  isBotTyping={this.state.isBotTyping}
-                  isUserHidden={this.props.isUserHidden}
-                  dialogHeight={this.state.dialogHeight} />
+            isBotTyping={this.state.isBotTyping}
+            isUserHidden={this.props.isUserHidden}
+            dialogHeight={this.state.dialogHeight} />
           <Input onSubmit={this.handleSubmitText} />
         </div>
       </div>
     );
   }
 }
+ReactDOM.render(<div id="bar" style={{marginTop:'-20px',height:'90px',backgroundColor:'#616161'}} >
+  <div style={{color:'white'}}><h1 style={{fontSize:'30px',paddingLeft:'240px',paddingTop:'20px'}}> Currency Bot </h1>
 
-ReactDOM.render(<ReactBotUI 
-dialogflow={{accessToken: '6f40a9dddfb3436f945e07010c9c2954'}} 
-dialogHeightMax={350}
-          isUserHidden={true}
-          isVisible={true}
-          ref={el => this.chat = el} />, document.getElementById('root'));
+  </div><ReactBotUI
+    dialogflow={{accessToken: 'f17a002742964563b69c0ff02f146a63'}}
+    dialogHeightMax={350}
+    isUserHidden={false}
+    isVisible={true}
+    ref={el => this.chat = el} /></div>, document.getElementById('root'));
