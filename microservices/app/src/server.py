@@ -5,8 +5,7 @@ from flask import render_template
 import urllib
 import json
 import os
-from currency_converter import CurrencyConverter
-c = CurrencyConverter()
+
 
 #scnsjcn
 from flask import request
@@ -86,7 +85,13 @@ def makeWebhookResult(req):
     fro=fro.upper()
     no = parameters.get("number")
 
-    cost = c.convert(no, fro, to)
+    r=requests.get('https://free.currencyconverterapi.com/api/v5/convert?q='+fro+'_'+to)
+
+    print(r.content)
+    r=json.loads(r.content)
+    cost=r["results"]["USD_PHP"]["val"] * no
+    print(cost)
+
 
     speech = "Amount in " + to + " is " + str(cost)
 
