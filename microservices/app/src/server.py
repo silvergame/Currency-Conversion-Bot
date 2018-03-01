@@ -84,7 +84,7 @@ def makeWebhookResult(req):
     to = parameters.get("to")
     to=to.upper()
     fro=fro.upper()
-    no = parameters.get("number")
+    no = float(parameters.get("number"))
     st1=fro+'_'+to
     r=requests.get('https://free.currencyconverterapi.com/api/v5/convert?q='+st1)
 
