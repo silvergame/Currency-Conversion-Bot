@@ -84,14 +84,14 @@ def makeWebhookResult(req):
     to=to.upper()
     fro=fro.upper()
     no = parameters.get("number")
-
-    r=requests.get('https://free.currencyconverterapi.com/api/v5/convert?q='+fro+'_'+to)
+    st1=fro+'_'+to
+    r=requests.get('https://free.currencyconverterapi.com/api/v5/convert?q='+st1)
 
     print(r.content)
     r=json.loads(r.content)
-    cost=r["results"]["USD_PHP"]["val"] * no
+    cost=r["results"][st1]["val"] * no
     print(cost)
-
+    print(cost1)
 
     speech = "Amount in " + to + " is " + str(cost)
 
