@@ -63,11 +63,12 @@ function getBotDelay(msg, isQuick = false) {
     }
   }
 
-  processResponse(text) {
-    const messages = text
-      .match(/[^!?]+[!?]*/g)
-      .map(str => str.trim());
 
+
+    processResponse(text) {
+    const messages = text
+      .match(/[^.!?]+[.!?]*/g)
+      .map(str => str.trim());
     this.botQueue = this.botQueue.concat(messages);
 
     // start processing bot queue
