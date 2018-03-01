@@ -142,7 +142,7 @@ ReactDOM.render(<div id="bar" style={{marginTop:'-20px',height:'90px',background
   <div style={{color:'white'}}><h1 style={{fontSize:'30px',paddingLeft:'240px',paddingTop:'20px'}}> Currency Bot </h1>
 
   </div><ReactBotUI
-    dialogflow={{accessToken: 'f17a002742964563b69c0ff02f146a63'}}
+    dialogflow={{accessToken: '6f40a9dddfb3436f945e07010c9c2954'}}
     dialogHeightMax={350}
     isUserHidden={false}
     isVisible={true}
