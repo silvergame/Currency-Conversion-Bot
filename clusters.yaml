@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: lukewarm10-hasura
+  data: null
+  kubeContext: lukewarm10
+  name: lukewarm10
