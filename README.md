@@ -35,5 +35,5 @@
 ### Contributors
 * **[silvergame](https://github.com/silvergame) Responsible for creating the front end using ReactJS and integrating it with Dialogflow (api.ai).**
 
-Volunteer:
+* Volunteer:
 [naren123456] (https://github.com/naren123456) Responsible for creating the backend using PythonFlask and integrating the webhook with the Hasura APIs.
