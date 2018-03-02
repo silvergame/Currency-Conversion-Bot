@@ -10,19 +10,19 @@
  
 ### How it works?
  
-##Visit https://ui.lukewarm10.hasura-app.io/ to try out the bot in its full functionality.
+* Visit https://ui.lukewarm10.hasura-app.io/ to try out the bot in its full functionality.
  
-##Dialogflow Bot:
-*The Bot is made using Dialogflow which take input from UI and reply back with a proper response.
-*The Bot is specialized for Currency Conversion. It is trained to identify almost 50 different currencies. 
-*When UI gives a particular input, the bot takes it and scans for the currencies between which it has to convert and also currency amount.
-*The Bot is also trained for normal day to day conversations also.
-*The Bot detects currencies based on different synonyms such as currency name, currency code and currency shorthand names. Example, HKD can be represented as Hong Kong dollar and Hong Kong. JPY can be represented as Yen and Japanese yen
+**Dialogflow Bot:**
+* The Bot is made using Dialogflow which take input from UI and reply back with a proper response.
+* The Bot is specialized for Currency Conversion. It is trained to identify almost 50 different currencies. 
+* When UI gives a particular input, the bot takes it and scans for the currencies between which it has to convert and also currency amount.
+* The Bot is also trained for normal day to day conversations also.
+* The Bot detects currencies based on different synonyms such as currency name, currency code and currency shorthand names. Example, HKD can be represented as Hong Kong dollar and Hong Kong. JPY can be represented as Yen and Japanese yen
 
-##Python Flask app:
-*The python flask app acts as a webhook which accepts post requests from the Diagflow Bot
-*The currency conversion rates are got using an external api where the  rates are updated automatically every 30 minutes, so the converted value will be accurate.
-*The app replies back to bot with the converted currency value.
+**Python Flask app:**
+* The python flask app acts as a webhook which accepts post requests from the Diagflow Bot
+* The currency conversion rates are got using an external api where the  rates are updated automatically every 30 minutes, so the converted value will be accurate.
+* The app replies back to bot with the converted currency value.
 
 ### Installation Instructions
 **Follow these instructions to get the code working on your machines locally. (Chrome web browser is preferred)**
