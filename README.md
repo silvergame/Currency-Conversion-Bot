@@ -1,4 +1,4 @@
-## HPDF Task 3 (ReactJS Front End + PyhtonFlask Back End)
+## HPDF Task 3 (ReactJS Front End + PythonFlask Back End)
  
 ### The Task
 **To deploy a currency bot as a custom service in Hasura that integrates with Dialogflow (api.ai) .**
