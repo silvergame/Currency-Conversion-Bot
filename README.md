@@ -11,6 +11,7 @@
 ### How it works?
  
 * Visit https://ui.lukewarm10.hasura-app.io/ to try out the bot in its full functionality.
+* Check out https://hasura.io/hub/projects/vrinda/currency-conversion-bot for our published project at Hasura hub.
  
 **Dialogflow Bot:**
 * The Bot is made using Dialogflow which take input from UI and reply back with a proper response.
